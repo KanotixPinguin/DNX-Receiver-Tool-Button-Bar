@@ -55,3 +55,11 @@ sudo ./install.sh uninstall
 
 Backups: `/opt/dnx-tool-button-bar-backups`.
 
+---
+
+## Verbindungen im DNX-Ökosystem
+
+![DNX Gesamtarchitektur & Verbindungen](docs/dnx-architektur-verbindungen.png)
+
+* **Verbindung zu `DNX-Styler` (`#dnx-master-tool-row` & `TOOL_DEFS`):** Im Voll-Styler werden bis zu `26` Werkzeuge (`TOOL_DEFS`) in derselben Receiver-Schalterzeile gebündelt; dieses Standalone-Paket liefert die abziehbare (`dnx.toolrow.pos.v1`) und per Drag & Drop sortierbare (`dnx.toolrow.order.v1`) 15-Button-Werkzeugzeile ohne Voll-Styler.
+* **Verbindung zu `DNX-Receiver-Account-Control`:** Jeder angebundene Modul-Button respektiert die vom Konto-Server (`:8095/api/me`) gelieferten Werkzeugrechte (`window.DNXReceiverRights`).
